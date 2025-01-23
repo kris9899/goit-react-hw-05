@@ -1,0 +1,41 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 15px 20px;
+}
+.moviePageForm {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+}
+.MoviePageInput {
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid deeppink;
+  padding: 10px 20px;
+  transition: background-color 250ms ease-in-out;
+  color: darksalmon !important;
+}
+.MoviePageInput:focus,
+.MoviePageInput:hover,
+.MoviePageInput:active {
+  background-color: antiquewhite;
+}
+.MoviePageButton {
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid deeppink;
+  padding: 10px 20px;
+  transition: background-color 250ms ease-in-out;
+  color: darksalmon;
+}
+.MoviePageButton:active,
+.MoviePageButton:hover,
+.MoviePageButton:focus {
+  outline: none;
+  border: 1px solid deeppink;
+  background-color: antiquewhite;
+}

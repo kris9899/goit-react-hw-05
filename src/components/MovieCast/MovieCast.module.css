@@ -11,10 +11,9 @@
 .castList {
   display: flex;
   justify-content: flex-start;
-
-  gap: 10px;
-
+  gap: 20px;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 .castItem {
   display: flex;

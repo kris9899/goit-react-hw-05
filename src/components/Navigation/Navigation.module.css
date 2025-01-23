@@ -1,0 +1,41 @@
+.wrap {
+  width: 100%;
+  background-color: deeppink;
+  margin: 0;
+  padding: 0;
+}
+.nav {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 20px;
+  background-color: deeppink;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  box-sizing: border-box;
+}
+.link {
+  position: relative;
+  padding: 20px 0;
+  font-weight: 500;
+  font-size: 30px;
+  color: #fff;
+  transition: all 250ms ease-in-out;
+}
+.link:hover,
+.link:focus {
+  color: darksalmon;
+}
+.active::after {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: darksalmon;
+}
+.active {
+  color: darksalmon;
+}
