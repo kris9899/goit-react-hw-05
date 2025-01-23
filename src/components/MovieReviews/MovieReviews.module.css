@@ -1,0 +1,32 @@
+.title {
+  font-weight: 700;
+  font-size: 32px;
+  color: deeppink;
+  margin-bottom: 16px;
+}
+.reviewsList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+}
+.reviewsItem {
+  background-color: deeppink;
+  border-radius: 4px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  width: 100%;
+}
+.reviewsName {
+  color: darksalmon;
+  margin-bottom: 8px;
+}
+.reviewsText {
+  color: darksalmon;
+  max-height: 200px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.reviewsText::-webkit-scrollbar {
+  display: none;
+}

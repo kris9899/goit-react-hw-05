@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getCastId } from '../../services/api';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
+import css from './MovieCast.module.css';
 
 export default function MovieCast() {
   const [movieCast, setMovieCast] = useState([]);
@@ -24,22 +25,27 @@ export default function MovieCast() {
   if (movieCast.length === 0) return <ErrorMessage />;
 
   return (
-    <div>
-      {movieCast.map(({ id, character, original_name, profile_path }) => (
-        <div key={id}>
-          <img
-            src={
-              profile_path
-                ? `https://image.tmdb.org/t/p/w200/${profile_path}`
-                : defaultImg
-            }
-            alt={original_name}
-            width={100}
-          />
-          <h3>{original_name}</h3>
-          <p>{character}</p>
-        </div>
-      ))}
+    <div className={css.castWrapper}>
+      <h3 className={css.titleCast}>Cast</h3>
+      <ul className={css.castList}>
+        {movieCast.map(({ id, character, original_name, profile_path }) => (
+          <li key={id} className={css.castItem}>
+            <img
+              src={
+                profile_path
+                  ? `https://image.tmdb.org/t/p/w200/${profile_path}`
+                  : defaultImg
+              }
+              alt={original_name}
+              className={css.img}
+            />
+            <div className={css.castInfo}>
+              <h3 className={css.castName}>{original_name}</h3>
+              <p className={css.castCharacter}>{character}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

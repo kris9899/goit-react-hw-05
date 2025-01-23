@@ -1,0 +1,61 @@
+.castWrapper {
+  width: 100%;
+  padding: 20px;
+}
+.titleCast {
+  font-weight: 700;
+  font-size: 32px;
+  color: deeppink;
+  margin-bottom: 16px;
+}
+.castList {
+  display: flex;
+  justify-content: flex-start;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+}
+.castItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: deeppink;
+  width: 200px;
+  height: 350px;
+  flex-shrink: 0;
+}
+
+.img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+.castInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  height: 40%;
+}
+
+.castName {
+  color: darksalmon;
+  font-size: 18px;
+  margin-bottom: 8px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-wrap: wrap;
+}
+.castCharacter {
+  color: darksalmon;
+  font-size: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-wrap: wrap;
+}

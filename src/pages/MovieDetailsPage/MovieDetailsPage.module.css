@@ -1,0 +1,39 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.Link {
+  display: flex;
+  align-self: flex-start;
+  color: deeppink;
+  font-size: 25px;
+  transition: font-size 0.3s ease;
+}
+.Link:active,
+.Link:hover,
+.Link:focus {
+  color: pink;
+  font-size: 18px;
+}
+.imgWrapper {
+  position: relative;
+  margin-right: 20px;
+}
+
+.infoWrapper {
+  position: absolute; /* Enables absolute positioning */
+  top: 10px; /* Adjust the vertical position (distance from the top) */
+  right: 10px; /* Adjust the horizontal position (distance from the right) */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Optional: Add a background for better readability */
+  padding: 20px; /* Add padding inside the box */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for styling */
+  z-index: 1000; /* Ensure it appears above other elements */
+}

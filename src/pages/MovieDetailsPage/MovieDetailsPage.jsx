@@ -8,6 +8,7 @@ import {
   useParams,
 } from 'react-router-dom';
 import { getMovieId } from '../../services/api';
+import css from './MovieDetailsPage.module.css';
 
 export default function MovieDetailsPage() {
   const { movieId } = useParams();
@@ -31,23 +32,26 @@ export default function MovieDetailsPage() {
   if (!movie) return null;
 
   return (
-    <div>
-      <Link to={previousPage}>Go back</Link>
-      <div>
+    <div className={css.wrapper}>
+      <Link to={previousPage} className={css.Link}>
+        Go back
+      </Link>
+      <div className={css.imgWrapper}>
         <img
           src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
           alt={movie.title}
         />
-        <div>
-          <h3>{movie.title}</h3>
-          <p>{movie.overview}</p>
+        <div className={css.infoWrapper}>
+          <h3 className={css.title}>{movie.title}</h3>
+          <p className={css.overview}>{movie.overview}</p>
         </div>
       </div>
-      <nav>
-        <NavLink to="cast" state={previousPage}>
+      <nav className={css.nav}>
+        <h2 className={css.addInfo}>Additional information</h2>
+        <NavLink to="cast" state={previousPage} className={css.navLink}>
           Cast
         </NavLink>
-        <NavLink to="reviews" state={previousPage}>
+        <NavLink to="reviews" state={previousPage} className={css.navLink}>
           Reviews
         </NavLink>
       </nav>
